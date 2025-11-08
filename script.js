@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    
     function openMenu() {
         if (mobileMenuOverlay) mobileMenuOverlay.classList.add('active');
         if (menuToggle) menuToggle.classList.add('active');
