@@ -358,7 +358,6 @@ body {
     background: conic-gradient(from 90deg, #10c8e1, #25d49a, #c9dc26, #ff9a33, #f24ca4);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    animation: rotate-border 3s linear infinite;
     z-index: -1;
 }
 
@@ -1020,12 +1019,11 @@ body {
 .recap-btn.btn-gradient::before {
     content: '';
     position: absolute;
-    inset: -3px;
+    inset: -1px;
     border-radius: inherit;
     background: conic-gradient(from 0deg, #10c8e1, #25d49a, #c9dc26, #ff9a33, #f24ca4, #10c8e1);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    animation: rotate-border 3s linear infinite;
     z-index: -1;
 }
 
@@ -2617,7 +2615,10 @@ body {
     }
 
     .swiper-pagination {
+        left: 0% !important;
         bottom: 20px !important;
+        transform: translateX(-0%);
+        justify-content: center;
     }
 
     /* About Section */
@@ -3207,7 +3208,7 @@ body {
     }
 
     .register-submit {
-        padding: 14px 50px;
+        padding: 14px 5 0px;
         font-size: 14px;
     }
 
