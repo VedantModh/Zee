@@ -502,7 +502,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 0 ;
+    margin: 0;
 }
 
 .mobile-nav-list {
@@ -544,7 +544,7 @@ body {
 .mobile-menu-button {
     width: 100%;
     max-width: 400px;
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -2968,11 +2968,16 @@ body {
 
     /* Hero */
     .home-logo {
-        top: 38%;
+        top: 50%;
     }
 
     .brand-mini {
         width: min(70vw, 260px);
+    }
+
+    .hero-bottom h1 {
+        font-size: clamp(16px, 4.5vw, 20px);
+        line-height: 1.6;
     }
 
     .hero-bottom {
@@ -3007,7 +3012,7 @@ body {
     }
 
     .about-logo {
-        max-width: 200px;
+        max-width: 0px;
     }
 
     .about-para {
@@ -3034,13 +3039,13 @@ body {
     }
 
     .card-icon {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
 
     .card-icon svg {
-        width: 36px;
-        height: 36px;
+        width: 70px;
+        height: 70px;
     }
 
     .card-title {
@@ -3060,8 +3065,14 @@ body {
         font-size: clamp(24px, 6vw, 32px);
     }
 
+    .city-tabs-swiper .swiper-slide {
+        width: calc(60% - 7.5px) !important;
+        flex-shrink: 0;
+    }
+
     .city-tab {
         padding: 10px 16px;
+        width: 100%;
     }
 
     .city-tab .city-name {
@@ -3073,7 +3084,26 @@ body {
     }
 
     .city-tabs-nav {
+        justify-content: center;
         gap: 30px;
+    }
+
+    .speakers-slider .swiper-button-next {
+        margin-top: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .speakers-slider .swiper-button-prev {
+        margin-top: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .speakers-slider .swiper-button-next::before {
+        left: 0;
+    }
+
+    .speakers-slider .swiper-button-prev::before {
+        left: 0;
     }
 
     .city-nav-btn {
@@ -3153,6 +3183,9 @@ body {
     .register-form {
         gap: 20px;
         padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
     }
 
     .form-field input {
@@ -3169,7 +3202,13 @@ body {
     }
 
     .register-logo {
-        max-width: 200px;
+        max-width: 0px;
+
+    }
+
+    .register-submit {
+        padding: 14px 50px;
+        font-size: 14px;
     }
 
     /* Footer */
@@ -3199,6 +3238,11 @@ body {
 
     .footer-logo-img {
         max-width: 180px;
+    }
+
+    .social-icon {
+        width: 14px;
+        height: 14px;
     }
 
     .footer-copyright p {

@@ -1,3 +1,14 @@
+
+// Initialize Lenis
+const lenis = new Lenis({
+    autoRaf: true,
+  });
+  
+  // Listen for the scroll event and log the event data
+  lenis.on('scroll', (e) => {
+    console.log(e);
+  });
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -300,36 +311,26 @@ function initScrollAnimations() {
             recapItems.forEach(item => {
                 const recapTitle = item.querySelector('.recap-title');
                 const recapGradientLine = item.querySelector('.about-gradient-line');
+                const recapBtn = item.querySelector('.recap-btn');
                 
+                // Set initial states
                 if (recapTitle) gsap.set(recapTitle, { opacity: 0, y: -30 });
                 if (recapGradientLine) gsap.set(recapGradientLine, { scaleX: 0, transformOrigin: 'center' });
+                if (recapBtn) gsap.set(recapBtn, { opacity: 0, y: 20 });
                 
-                if (recapTitle) {
-                    gsap.to(recapTitle, {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.8,
-                        ease: 'power2.out',
-                        scrollTrigger: {
-                            trigger: recapSection,
-                            start: 'top 60%',
-                            toggleActions: 'play none none none'
-                        }
-                    });
-                }
+                // Create a timeline for synchronized animation
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 70%',
+                        toggleActions: 'play none none none'
+                    }
+                });
                 
-                if (recapGradientLine) {
-                    gsap.to(recapGradientLine, {
-                        scaleX: 1,
-                        duration: 0.8,
-                        ease: 'power2.out',
-                        scrollTrigger: {
-                            trigger: recapSection,
-                            start: 'top 55%',
-                            toggleActions: 'play none none none'
-                        }
-                    });
-                }
+                // Animate all elements together
+                if (recapTitle) tl.to(recapTitle, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 0);
+                if (recapGradientLine) tl.to(recapGradientLine, { scaleX: 1, duration: 0.8, ease: 'power2.out' }, 0.1);
+                if (recapBtn) tl.to(recapBtn, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 0.2);
             });
         }
         
@@ -1113,15 +1114,16 @@ function initAgendaSection() {
         const nextBtn = document.querySelector('.city-nav-next');
         
         cityTabsSwiper = new Swiper(cityTabsEl, {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
+            slidesPerView: 2,
+            spaceBetween: 15,
             centeredSlides: false,
-            freeMode: true,
+            freeMode: false,
             navigation: {
                 nextEl: nextBtn,
                 prevEl: prevBtn
             },
             breakpoints: {
+                480: { slidesPerView: 2, spaceBetween: 15 },
                 640: { slidesPerView: 3, spaceBetween: 20 },
                 768: { slidesPerView: 4, spaceBetween: 20 },
                 1024: { slidesPerView: 5, spaceBetween: 20 }
