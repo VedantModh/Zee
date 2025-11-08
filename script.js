@@ -1,14 +1,3 @@
-
-// Initialize Lenis
-const lenis = new Lenis({
-    autoRaf: true,
-  });
-  
-  // Listen for the scroll event and log the event data
-  lenis.on('scroll', (e) => {
-    console.log(e);
-  });
-
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -22,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
         document.body.style.position = '';
         document.body.style.width = '';
+        // Re-enable Lenis scrolling
+        if (lenis) {
+            lenis.start();
+        }
     }
     
     function openMenu() {
@@ -30,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
         document.body.style.position = 'fixed';
         document.body.style.width = '100%';
+        // Disable Lenis scrolling when menu is open
+        if (lenis) {
+            lenis.stop();
+        }
     }
     
     if (menuToggle && mobileMenuOverlay) {
@@ -157,6 +154,47 @@ window.addEventListener('DOMContentLoaded', () => {
     line.addEventListener('animationend', finish, { once: true });
 });
 
+// Initialize Lenis Smooth Scroll
+let lenis = null;
+
+function initLenis() {
+    if (typeof Lenis !== 'undefined') {
+        // Check if mobile device
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+                        (window.innerWidth <= 768 && 'ontouchstart' in window);
+        
+        lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            smoothTouch: isMobile ? true : false, // Enable on mobile for smooth scrolling
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        // Integrate Lenis with GSAP ScrollTrigger
+        if (window.gsap && window.ScrollTrigger) {
+            lenis.on('scroll', ScrollTrigger.update);
+
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+
+            gsap.ticker.lagSmoothing(0);
+        } else {
+            // Fallback animation frame loop if GSAP is not available
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
+    }
+}
+
 // ScrollTrigger animations for About section
 function initScrollAnimations() {
     if (!window.gsap || !window.ScrollTrigger) {
@@ -166,6 +204,11 @@ function initScrollAnimations() {
     
     // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
+    
+    // Initialize Lenis after GSAP is ready
+    if (!lenis) {
+        initLenis();
+    }
     
     // Wait a bit for DOM to be ready
     setTimeout(() => {
