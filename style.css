@@ -3185,6 +3185,10 @@ body {
         justify-content: space-between;
     }
 
+    .footer-left {
+        text-align: center;
+    }
+
     .footer-heading {
         font-size: clamp(20px, 6vw, 28px);
     }
