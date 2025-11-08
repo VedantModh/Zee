@@ -491,7 +491,8 @@ function initScrollAnimations() {
                     ease: 'power2.out',
                     scrollTrigger: {
                         trigger: footerSection,
-                        start: 'top 70%',
+                        start: 'top 99%',
+                        end: 'top 80%',
                         toggleActions: 'play none none none'
                     }
                 });
@@ -505,7 +506,8 @@ function initScrollAnimations() {
                     ease: 'power2.out',
                     scrollTrigger: {
                         trigger: footerSection,
-                        start: 'top 70%',
+                        start: 'top 99%',
+                        end: 'top 80%',
                         toggleActions: 'play none none none'
                     }
                 });
@@ -519,7 +521,8 @@ function initScrollAnimations() {
                     ease: 'power2.out',
                     scrollTrigger: {
                         trigger: footerSection,
-                        start: 'top 60%',
+                        start: 'top 99%',
+                        end: 'top 80%',
                         toggleActions: 'play none none none'
                     }
                 });
