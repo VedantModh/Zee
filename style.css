@@ -344,10 +344,10 @@ body {
     text-shadow: 0 6px 5px rgba(0, 0, 0, 0.208);
     white-space: nowrap;
     background: linear-gradient(90deg, #10c8e1, #25d49a, #c9dc26, #ff9a33, #f24ca4);
-    border: 1px solid transparent;
+    border: none;
     transition: all 0.3s ease-in-out;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .btn-gradient::before {
@@ -359,6 +359,15 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: -1;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    padding: 2px;
+}
+
+.btn-gradient:hover::before {
+    opacity: 1;
 }
 
 .btn-gradient::after {
@@ -368,15 +377,15 @@ body {
     border-radius: inherit;
     background: inherit;
     z-index: -1;
-}
-
-.btn-gradient:hover::before {
-    opacity: 1;
+    transition: background 0.3s ease-in-out;
 }
 
 .btn-gradient:hover {
-    background: linear-gradient(#000000, #000000) padding-box,
-        linear-gradient(90deg, #10c8e1, #25d49a, #c9dc26, #ff9a33, #f24ca4) border-box;
+    background: #000000;
+}
+
+.btn-gradient:hover::after {
+    background: #000000;
 }
 
 @keyframes rotate-border {
@@ -1008,7 +1017,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     position: relative;
     overflow: visible;
-    border: 1px solid transparent;
 }
 
 .recap-btn.btn-gradient {
@@ -1019,12 +1027,17 @@ body {
 .recap-btn.btn-gradient::before {
     content: '';
     position: absolute;
-    inset: -1px;
+    inset: -2px;
     border-radius: inherit;
     background: conic-gradient(from 0deg, #10c8e1, #25d49a, #c9dc26, #ff9a33, #f24ca4, #10c8e1);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: -1;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    padding: 2px;
 }
 
 .recap-btn.btn-gradient::after {
@@ -1034,6 +1047,7 @@ body {
     border-radius: inherit;
     background: inherit;
     z-index: -1;
+    transition: background 0.3s ease-in-out;
 }
 
 .recap-btn.btn-gradient:hover::before {
@@ -1041,8 +1055,11 @@ body {
 }
 
 .recap-btn.btn-gradient:hover {
-    background: linear-gradient(#000000, #000000) padding-box,
-        linear-gradient(90deg, #f24ca4, #ff9a33, #c9dc26, #25d49a, #10c8e1) border-box;
+    background: #000000;
+}
+
+.recap-btn.btn-gradient:hover::after {
+    background: #000000;
 }
 
 .btn-dark {
@@ -1471,7 +1488,8 @@ body {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
-    border: 1px solid transparent;
+    position: relative;
+    overflow: visible;
 }
 
 /* Timeline Schedule */
@@ -2053,8 +2071,9 @@ body {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
-    border: 1px solid transparent;
     width: 50%;
+    position: relative;
+    overflow: visible;
 }
 
 .register-logo {
