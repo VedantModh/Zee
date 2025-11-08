@@ -502,7 +502,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 0 auto 80px;
+    margin: 0 ;
 }
 
 .mobile-nav-list {
@@ -544,7 +544,7 @@ body {
 .mobile-menu-button {
     width: 100%;
     max-width: 400px;
-    margin-top: auto;
+    margin-top: 10px;
     text-align: center;
 }
 
