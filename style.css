@@ -953,9 +953,9 @@ body {
     background: #000;
     padding: 120px 40px;
     padding-top: 0px;
-    /* display: flex; */
+    display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .recap-container {
