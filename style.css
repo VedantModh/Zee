@@ -353,7 +353,7 @@ body {
 .btn-gradient::before {
     content: '';
     position: absolute;
-    inset: -1px;
+    inset: -2px;
     border-radius: inherit;
     background: conic-gradient(from 90deg, #10c8e1, #25d49a, #c9dc26, #ff9a33, #f24ca4);
     opacity: 0;
@@ -1490,6 +1490,19 @@ body {
     cursor: pointer;
     position: relative;
     overflow: visible;
+}
+
+/* Remove hover effect for btn-view-schedule */
+.btn-view-schedule.btn-gradient:hover {
+    background: linear-gradient(90deg, #10c8e1, #25d49a, #c9dc26, #ff9a33, #f24ca4);
+}
+
+.btn-view-schedule.btn-gradient:hover::before {
+    opacity: 1;
+}
+
+.btn-view-schedule.btn-gradient:hover::after {
+    background: inherit;
 }
 
 /* Timeline Schedule */
