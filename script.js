@@ -986,6 +986,31 @@ let speakersSwiper = null;
 
 // City data
 const cityData = {
+    coimbatore: {
+        date: 'September 26th, 2025',
+        location: 'Coimbatore',
+        venue: 'Fairfield by Marriot',
+        timeline: [
+            { time: '03:00 PM – 03:30 PM', title: 'Welcome & Registration / High Tea', desc: 'Guest arrivals and registration', side: 'right' },
+            { time: '03:30 PM – 04:15 PM', title: 'Opening Address: Mrs. Laxmi Shetty', desc: 'Laxmi Shetty, Head - Advertisement Revenue, Broadcast & Digital, Zee Entertainment Enterprises | Welcome note and an overview of "Z’s Omnichannel Ecosystem"', side: 'left' },
+            { time: '04:15 PM – 04:45 PM', title: 'Speaker Session 1: Mr. P.K. Aroomugum', desc: 'IMr. P.K. Aroomugum | Managing Director | The Chennai Silks & Sree Kumaran Thangamaligai | Gold of Our Culture: Building a National Brand on Regional Roots', side: 'right' },
+            { time: '04:45 PM – 05:15 PM', title: 'Speaker Session 2: Mr. B. Gokul', desc: 'Mr. B. Gokul | Partner | VNC Electrodes (Indicus Paints) | Building Bharat’s New-Age Manufacturing Brands: From Legacy to Innovation', side: 'left' },
+            { time: '05:15 PM – 05:45 PM', title: 'Speaker Session 3: Mr. G. Muralidharan', desc: 'Mr. G. Muralidharan | Managing Director | KAG Tiles India Pvt Ltd | From Floor to Fame: Building a Pan-India Brand from the South (KAG Tiles)', side: 'right' },
+            { time: '05:45 PM – 06:15 PM', title: 'Speaker Session 4: Mr. N. R .R. Vijayakumar (Venture Capitalist)', desc: 'Mr. N. R .R. Vijayakumar | Managing Director | FounderPassion Foundation (VC) | From Ideas to Impact: Building an Innovation-First Generation', side: 'left' },
+            { time: '06:15 PM – 07:00 PM', title: '\'Z\' Network Ecosystem Showcase: Rajnish Gupta', desc: 'Rajnish Gupta, Chief Sales Officer, South Cluster | Showcase of \'Z\' Channels omnichannel strength + custom offering packages', side: 'right' },
+            { time: '07:00 PM – 07:30 PM', title: 'Closing Note + Breakout Session', side: 'left' },
+            { time: '07:30 PM Onwards', title: 'Networking Dinner', desc: '-', side: 'right' },
+        ],
+        speakers: [
+            // { name: 'Mr.Ashish Sehgal', title: 'Chief Growth Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 1.png' },
+            { name: 'Laxmi Shetty', title: 'Head - Advertisement Revenue, Broadcast & Digital', company: 'Zee Entertainment Enterprises', image: './Zee All Images:Videos/Speakers cm1.jpg' },
+            { name: 'Mr. P.K. Aroomugum', title: 'Managing Director', company: 'The Chennai Silks & Sree Kumaran Thangamaligai', image: './Zee All Images:Videos/Speakers cm2.jpg' },
+            { name: 'Mr. B. Gokul', title: 'Partner', company: 'VNC Electrodes (Indicus Paints)', image: './Zee All Images:Videos/Speakers cm3.jpg' },
+            { name: 'Mr. G. Muralidharan', title: 'Managing Director', company: 'KAG Tiles India Pvt Ltd', image: './Zee All Images:Videos/Speakers cm4.jpg' },
+            { name: 'Mr. N. R .R. Vijayakumar', title: 'Managing Director', company: 'FounderPassion Foundation (VC)', image: './Zee All Images:Videos/Speakers cm5.jpg' },
+            { name: 'Rajnish Gupta', title: 'Chief Sales Officer', company: 'South Cluster', image: './Zee All Images:Videos/Speakers cm6.jpg' },
+        ]
+    },
     kolkata: {
         date: 'July 28th, 2025',
         location: 'Kolkata',
@@ -1196,9 +1221,14 @@ function initAgendaSection() {
         });
     });
     
-    // Initialize with default city (Kolkata) speakers
-    if (cityData.kolkata && cityData.kolkata.speakers) {
-        updateSpeakers(cityData.kolkata.speakers);
+    // Initialize with default city (Coimbatore) speakers and timeline
+    if (cityData.coimbatore) {
+        if (cityData.coimbatore.speakers) {
+            updateSpeakers(cityData.coimbatore.speakers);
+        }
+        if (cityData.coimbatore.timeline) {
+            updateTimeline(cityData.coimbatore.timeline);
+        }
     }
 }
 
