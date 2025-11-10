@@ -1039,7 +1039,7 @@ const cityData = {
             { name: 'Mr. Ankit Daga', title: 'Director', company: 'Mcnroe Consumer Products Pvt. Ltd.', image: './Zee All Images:Videos/Speakers 10.png' },
             { name: 'Mr. Muralikrishnan L', title: 'CMO & Co-founder', company: 'ZWow Momo', image: './Zee All Images:Videos/Speakers 11.png' },
             { name: 'Dr. Suborno Bose', title: 'Chairman & CEO', company: 'I.I.H.M. & Indismart Group Worldwide', image: './Zee All Images:Videos/Speakers 12.png' },
-            { name: 'Ms. Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Ms. Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers cm1.jpg' },
             { name: 'Mr. Sanjoy Chatterjee', title: 'Chief Sales Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' }
         ]
     },
@@ -1069,7 +1069,7 @@ const cityData = {
             { name: 'Shri. BA. Ramesh', title: 'Joint Managing Director', company: 'Thangamayil Jewellery Ltd.', image: './Zee All Images:Videos/Speakers c7.png' },
             { name: 'Mr. Senthil Kumar Suthanandam', title: 'Senior General Manager', company: 'Hatsun Agro Products Ltd.', image: './Zee All Images:Videos/Speakers c8.png' },
             { name: 'Mr. Chandrasekar Kupperi', title: 'Founder', company: 'Anova Corporate Services Pvt. Ltd.', image: './Zee All Images:Videos/Speakers c9.png' },
-            { name: 'Ms. Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Ms. Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers cm1.jpg' },
             { name: 'Mr. Rajnish Gupta', title: 'Chief Sales Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
         ]
     },
@@ -1099,7 +1099,7 @@ const cityData = {
             { name: 'Shuvadip Banerjee', title: 'Chief Digital Marketing Officer', company: 'ITC Ltd.', image: './Zee All Images:Videos/Speakers b6.png' },
             { name: 'Aparna Thakur', title: 'Sr. Vice President', company: 'Hive Minds', image: './Zee All Images:Videos/Speakers b7.png' },
             { name: 'Rasika Prashant', title: 'Chief Marketing Officer & Co-Founder', company: 'Tata Soulfull', image: './Zee All Images:Videos/Speakers 13.png' },
-            { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers cm1.jpg' },
             { name: 'V. S. Raghavan', title: 'Chief Sales Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Venkatesh Vijayaraghavan', title: 'MD and CEO', company: 'TTK Prestige', image: './Zee All Images:Videos/Speakers 13.png' },
         ]
@@ -1126,7 +1126,7 @@ const cityData = {
             { name: 'Kunal Sharma', title: 'Head of Marketing & Business Head, Modern Trade and E-Commerce', company: 'KRBL Limited', image: './Zee All Images:Videos/Speakers d3.png' },
             { name: 'Saurabh Munjal', title: 'Co-Founder and Chief Executive Officer', company: 'Lahori Zeera', image: './Zee All Images:Videos/Speakers d4.png' },
             { name: 'Manik Pasricha', title: 'Vice President of Investments', company: 'Titan Capital', image: './Zee All Images:Videos/Speakers 13.png' },
-            { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers cm1.jpg' },
             { name: 'Ali Zaidi', title: 'Chief Sales Officer - Hindi GEC & FTA GEC Cluster - Sales North', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Mr. Mohit Joshi', title: 'Chief Executive Officer', company: 'Havas Media', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Raj Vikram', title: 'Co-founder & CEO', company: 'Beast Life', image: './Zee All Images:Videos/Speakers 13.png' },
@@ -1159,7 +1159,7 @@ const cityData = {
             { name: 'Shubhranshu Singh', title: 'Chief Marketing Officer', company: 'TATA Motors', image: './Zee All Images:Videos/Speakers m2.png' },
             { name: 'Ajay Gupta', title: 'Founder of Capital Foods ( Ching\'s Secret ) & Counsultant to Tata Consumer.',image: './Zee All Images:Videos/Speakers m3.png' },
             { name: 'Ashish Pethe', title: 'Partner', company: 'Waman Hari Pethe Jewellers', image: './Zee All Images:Videos/Speakers 13.png' },
-            { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers cm1.jpg' },
             { name: 'Parikshit Prabhudesai', title: 'Vice Chairman', company: 'Pitambari Products Pvt. Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Ashwin Padmanabhan', title: 'Chief Operating Officer', company: 'WPP Media South Asia', image: './Zee All Images:Videos/Speakers 13.png' },
 
@@ -1343,12 +1343,14 @@ function toggleSchedule() {
     if (schedule.style.display === 'none') {
         schedule.style.display = 'block';
         btn.textContent = 'HIDE SCHEDULE';
+        btn.classList.add('hide-schedule-state');
         setTimeout(() => {
             schedule.style.opacity = '1';
         }, 10);
     } else {
         schedule.style.display = 'none';
         btn.textContent = 'VIEW SCHEDULE';
+        btn.classList.remove('hide-schedule-state');
     }
 }
 
