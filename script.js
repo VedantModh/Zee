@@ -1128,6 +1128,9 @@ const cityData = {
             { name: 'Manik Pasricha', title: 'Vice President of Investments', company: 'Titan Capital', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Ali Zaidi', title: 'Chief Sales Officer - Hindi GEC & FTA GEC Cluster - Sales North', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Mr. Mohit Joshi', title: 'Chief Executive Officer', company: 'Havas Media', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Raj Vikram', title: 'Co-founder & CEO', company: 'Beast Life', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Manav Sethi', title: 'Head Media Martech & Growth', company: 'VIDA', image: './Zee All Images:Videos/Speakers 13.png' },
         ]
     },
     mumbai: {
@@ -1158,6 +1161,7 @@ const cityData = {
             { name: 'Ashish Pethe', title: 'Partner', company: 'Waman Hari Pethe Jewellers', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Parikshit Prabhudesai', title: 'Vice Chairman', company: 'Pitambari Products Pvt. Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Ashwin Padmanabhan', title: 'Chief Operating Officer', company: 'WPP Media South Asia', image: './Zee All Images:Videos/Speakers 13.png' },
 
         ]
     }
