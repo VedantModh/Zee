@@ -133,20 +133,9 @@ window.addEventListener('DOMContentLoaded', () => {
             swiper = new Swiper('.hero-swiper', {
                 speed: 700,
                 loop: false,
-                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-                pagination: { el: '.swiper-pagination', clickable: true },
-                on: {
-                    init: function() {
-                        const activeVideo = document.querySelector('.swiper-slide-active .slide-video');
-                        if (activeVideo) { activeVideo.play().catch(() => {}); }
-                    },
-                    slideChange: function() {
-                        // Pause all videos, play the one in the active slide
-                        document.querySelectorAll('.slide-video').forEach(v => { try { v.pause(); } catch(e) {} });
-                        const activeVideo = document.querySelector('.swiper-slide-active .slide-video');
-                        if (activeVideo) { activeVideo.play().catch(() => {}); }
-                    }
-                }
+                allowTouchMove: false,
+                navigation: false,
+                pagination: false
             });
         }
     } catch (e) {}
@@ -1000,7 +989,7 @@ const cityData = {
     kolkata: {
         date: 'July 28th, 2025',
         location: 'Kolkata',
-        venue: 'TBA',
+        venue: 'ITC Royal Bengal',
         timeline: [
             { time: '9:00 AM - 10:00 AM', title: 'WELCOME & REGISTRATION + BREAKFAST', desc: 'Guest arrivals and registration', side: 'right' },
             { time: '10:00 AM - 10:20 AM', title: 'OPENING ADDRESS: MR.ASHISH SEHGAL', desc: 'Welcome note and an overview of Z\'s omnichannel Ecosystem', side: 'left' },
@@ -1062,7 +1051,7 @@ const cityData = {
     bangalore: {
         date: 'July 23rd, 2025',
         location: 'Bangalore',
-        venue: 'TBA',
+        venue: 'ITC Gardenia',
         timeline: [
             { time: '09:00 AM – 10:15 AM', title: 'WELCOME & REGISTRATION + BREAKFAST', desc: 'Guest arrivals and registration', side: 'right' },
             { time: '10:15 AM – 10:45 AM', title: 'OPENING ADDRESS: MR.ASHISH SEHGAL', desc: 'Welcome note and an overview of Z\'s omnichannel Ecosystem', side: 'left' },
@@ -1093,7 +1082,7 @@ const cityData = {
     delhi: {
         date: 'July 18th, 2025',
         location: 'Delhi',
-        venue: 'TBA',
+        venue: 'Roseate House',
         timeline: [
             { time: '9:00 AM - 10:00 AM', title: 'WELCOME & REGISTRATION + BREAKFAST', desc: 'Guest arrivals and registration', side: 'right' },
             { time: '10:00 AM - 10:20 AM', title: 'OPENING ADDRESS: MR.ASHISH SEHGAL', desc: 'Welcome note and an overview of Z\'s omnichannel Ecosystem', side: 'left' },
@@ -1119,7 +1108,7 @@ const cityData = {
     mumbai: {
         date: 'July 11th, 2025',
         location: 'Mumbai',
-        venue: 'TBA',
+        venue: 'Grand Hyatt, Santacruz',
         timeline: [
             { time: '09:00 AM – 09:30 AM', title: 'Welcome & Registration', desc: 'Guest arrivals and registration', side: 'right' },
             { time: '09:30 AM – 10:00 AM', title: 'Networking Breakfast', desc: 'Breakfast with open networking among clients, agencies, VCs, and the Z team', side: 'left' },
