@@ -356,7 +356,7 @@ body {
     position: absolute;
     inset: -2px;
     border-radius: inherit;
-    background: conic-gradient(from -90deg, #10c8e1, #25d49a, #c9dc26, #ff9a33, #f24ca4 ,#ff9a33,#c9dc26,#25d49a,#10c8e1);
+    background: conic-gradient(from -90deg, #10c8e1, #6aff00, #c9dc26 , #d9ff00, #f24ca4 ,#d9ff00,#c9dc26,#6aff00,#10c8e1);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: -1;
