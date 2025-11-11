@@ -1071,9 +1071,9 @@ let speakersSwiper = null;
 // City data
 const cityData = {
     pune: {
-        date: 'xxxxxx',
+        date: 'November 15th, 2025',
         location: 'Pune',
-        venue: 'xxxxxx',
+        venue: 'The Westin, Koregaon Park',
         timeline: [
             { time: '05:00 PM – 6:00 PM', title: 'Welcome & Registration + Hi-tea', desc: 'Guest arrivals and registration', side: 'right' },
             { time: '6:00 PM - 6:30 PM', title: 'Opening Address: Ms. Laxmi Shetty', desc: 'Welcome note and an overview of Z\'s Omnichannel Ecosystem', side: 'left' },
@@ -1085,12 +1085,10 @@ const cityData = {
             { time: '9:00 PM Onwards', title: 'Closing Note + Networking Cocktails + Dinner', desc: '', side: 'left' },
         ],
         speakers: [
-            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
-            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
-            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
-            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
-            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
-            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: ' Laxmi Shetty ', title: 'Head - Advertisement Revenue', company: 'Zee Entertainment Enterprises LtdBroadcast & Digital + Mr. xxxx. Zee Entertainment Enterprises Ltd', image: './Zee All Images:Videos/Speakers cm1.jpg' },
+            { name: 'Mr. Tanmay Kanitkar', title: 'DDirector', company: 'Anuroop Wiwaha Pvt Ltd', image: './Zee All Images:Videos/Speakers p2.jpg' },
+            { name: 'Mrs. Zelam Chaubal', title: 'Joint M.D', company: ' Kesari Tours & Travels', image: './Zee All Images:Videos/Speakers p1.jpg' },
+            { name: 'Amit Modak', title: 'Director', company: 'P N Gadgil & Sons Ltd.', image: './Zee All Images:Videos/Speakers p3.jpg' },
         ]
     },
     coimbatore: {
@@ -1136,7 +1134,7 @@ const cityData = {
         ],
         speakers: [
             // { name: 'Mr.Ashish Sehgal', title: 'Chief Growth Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 1.png' },
-            { name: 'Mr. Abhijit Roy', title: 'MD & CEO', company: 'Berger Paints India Ltd.', image: './Zee All Images:Videos/Speakers 3.png' },
+            { name: 'Mr. Abhijit Roy', title: 'MD & CEO', company: 'Berger Paints India Ltd.', image: './Zee All Images:Videos/Speakers 3.jpg' },
             { name: 'Ms. Poulami Roy', title: 'CMO', company: 'Joy Personal Care (RSH Global)', image: './Zee All Images:Videos/Speakers 4.png' },
             { name: 'Ms. Swarnali Kanjilal', title: 'Director', company: 'Adi Mohan Kanjilal Marketing Private Limited', image: './Zee All Images:Videos/Speakers 5.png' },
             { name: 'Mr. Ashish Beriwala', title: 'Director', company: 'SRMB Group', image: './Zee All Images:Videos/Speakers 6.png' },
@@ -1232,7 +1230,7 @@ const cityData = {
             { name: 'Harkawal Singh', title: 'Vice President, Marketing', company: 'Rohit Surfactant Pvt Ltd.', image: './Zee All Images:Videos/Speakers d2.png' },
             { name: 'Kunal Sharma', title: 'Head of Marketing & Business Head, Modern Trade and E-Commerce', company: 'KRBL Limited', image: './Zee All Images:Videos/Speakers d3.png' },
             { name: 'Saurabh Munjal', title: 'Co-Founder and Chief Executive Officer', company: 'Lahori Zeera', image: './Zee All Images:Videos/Speakers d4.png' },
-            { name: 'Manik Pasricha', title: 'Vice President of Investments', company: 'Titan Capital', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Manik Pasricha', title: 'Vice President of Investments', company: 'Titan Capital', image: './Zee All Images:Videos/Speakers d5.jpg' },
             { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers cm1.jpg' },
             { name: 'Ali Zaidi', title: 'Chief Sales Officer - Hindi GEC & FTA GEC Cluster - Sales North', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Mr. Mohit Joshi', title: 'Chief Executive Officer', company: 'Havas Media', image: './Zee All Images:Videos/Speakers 13.png' },
@@ -1265,7 +1263,7 @@ const cityData = {
             // { name: 'Mr.Ashish Sehgal', title: 'Chief Growth Officer', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers 1.png' },
             { name: 'Shubhranshu Singh', title: 'Chief Marketing Officer', company: 'TATA Motors', image: './Zee All Images:Videos/Speakers m2.png' },
             { name: 'Ajay Gupta', title: 'Founder of Capital Foods ( Ching\'s Secret ) & Counsultant to Tata Consumer.',image: './Zee All Images:Videos/Speakers m3.png' },
-            { name: 'Ashish Pethe', title: 'Partner', company: 'Waman Hari Pethe Jewellers', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'Ashish Pethe', title: 'Partner', company: 'Waman Hari Pethe Jewellers', image: './Zee All Images:Videos/Speakers m4.jpg' },
             { name: 'Laxmi Shetty', title: 'Chief Sales Strategy & Maximisation Officer • Sales Planning & Strategy', company: 'Zee Entertainment Enterprises Ltd.', image: './Zee All Images:Videos/Speakers cm1.jpg' },
             { name: 'Parikshit Prabhudesai', title: 'Vice Chairman', company: 'Pitambari Products Pvt. Ltd.', image: './Zee All Images:Videos/Speakers 13.png' },
             { name: 'Ashwin Padmanabhan', title: 'Chief Operating Officer', company: 'WPP Media South Asia', image: './Zee All Images:Videos/Speakers 13.png' },
