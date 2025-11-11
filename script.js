@@ -1085,8 +1085,8 @@ const cityData = {
             { time: '9:00 PM Onwards', title: 'Closing Note + Networking Cocktails + Dinner', desc: '', side: 'left' },
         ],
         speakers: [
-            { name: ' Laxmi Shetty ', title: 'Head - Advertisement Revenue', company: 'Zee Entertainment Enterprises LtdBroadcast & Digital + Mr. xxxx. Zee Entertainment Enterprises Ltd', image: './Zee All Images:Videos/Speakers cm1.jpg' },
-            { name: 'Mr. Tanmay Kanitkar', title: 'DDirector', company: 'Anuroop Wiwaha Pvt Ltd', image: './Zee All Images:Videos/Speakers p2.jpg' },
+            { name: ' Laxmi Shetty ', title: 'Head - Advertisement Revenue', company: 'Zee Entertainment Enterprises Ltd', image: './Zee All Images:Videos/Speakers cm1.jpg' },
+            { name: 'Mr. Tanmay Kanitkar', title: 'Director', company: 'Anuroop Wiwaha Pvt Ltd', image: './Zee All Images:Videos/Speakers p2.jpg' },
             { name: 'Mrs. Zelam Chaubal', title: 'Joint M.D', company: ' Kesari Tours & Travels', image: './Zee All Images:Videos/Speakers p1.jpg' },
             { name: 'Amit Modak', title: 'Director', company: 'P N Gadgil & Sons Ltd.', image: './Zee All Images:Videos/Speakers p3.jpg' },
         ]
