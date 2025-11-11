@@ -1070,6 +1070,29 @@ let speakersSwiper = null;
 
 // City data
 const cityData = {
+    pune: {
+        date: 'xxxxxx',
+        location: 'Pune',
+        venue: 'xxxxxx',
+        timeline: [
+            { time: '05:00 PM – 6:00 PM', title: 'Welcome & Registration + Hi-tea', desc: 'Guest arrivals and registration', side: 'right' },
+            { time: '6:00 PM - 6:30 PM', title: 'Opening Address: Ms. Laxmi Shetty', desc: 'Welcome note and an overview of Z\'s Omnichannel Ecosystem', side: 'left' },
+            { time: '6:30 PM - 7:00 PM', title: 'Speaker Session 1: Mr. Tanmay Kanitkar', desc: 'Speaker Topic 1', side: 'right' },
+            { time: '7:00 PM - 7:30 PM', title: 'Speaker Session 2: Mrs. Zelam Chaubal', desc: 'Speaker Topic 2', side: 'left' },
+            { time: '7:30 PM - 8:00 PM', title: 'Speaker Session 3: Amit Modak', desc: 'Speaker Topic 3', side: 'right' },
+            { time: '8:00 PM - 8:30 PM', title: 'Speaker Session 4: xxxxxx', desc: 'Speaker Topic 4', side: 'left' },
+            { time: '8:30 PM - 9:00 PM', title: 'Z Network Ecosystem Showcase: Ms. Laxmi Shetty + Mr. xxxxxx', desc: 'Showcase of \'Z\' Channels omnichannel strength + custom offering packages', side: 'right' },
+            { time: '9:00 PM Onwards', title: 'Closing Note + Networking Cocktails + Dinner', desc: '', side: 'left' },
+        ],
+        speakers: [
+            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
+            { name: 'John Doe', title: 'Designation:- xxxxxxx', company: 'Company:- xxxxxx', image: './Zee All Images:Videos/Speakers 13.png' },
+        ]
+    },
     coimbatore: {
         date: 'September 26th, 2025',
         location: 'Coimbatore',
@@ -1309,13 +1332,13 @@ function initAgendaSection() {
         });
     });
     
-    // Initialize with default city (Coimbatore) speakers and timeline
-    if (cityData.coimbatore) {
-        if (cityData.coimbatore.speakers) {
-            updateSpeakers(cityData.coimbatore.speakers);
+    // Initialize with default city (Pune) speakers and timeline
+    if (cityData.pune) {
+        if (cityData.pune.speakers) {
+            updateSpeakers(cityData.pune.speakers);
         }
-        if (cityData.coimbatore.timeline) {
-            updateTimeline(cityData.coimbatore.timeline);
+        if (cityData.pune.timeline) {
+            updateTimeline(cityData.pune.timeline);
         }
     }
 }
