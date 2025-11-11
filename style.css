@@ -1625,7 +1625,7 @@ body {
 
 /* Speakers Section */
 .speakers-section {
-    cursor: auto;
+    cursor: auto !important;
     margin-top: 0px;
     padding-top: 0px;
 }
@@ -1640,6 +1640,7 @@ body {
 }
 
 .speakers-slider {
+    cursor: auto !important;
     padding-bottom: 80px;
     position: relative;
     height: 70vh;
@@ -1722,6 +1723,7 @@ body {
 }
 
 .speaker-card {
+    cursor: auto !important;
     background: transparent;
     border-radius: 12px;
     padding: 20px;
