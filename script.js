@@ -1393,7 +1393,7 @@ function updateSpeakers(speakersData) {
         speakerSlide.className = 'swiper-slide';
         
         speakerSlide.innerHTML = `
-            <div class="speaker-card" onclick="openSpeakerModal('${speaker.name}', '${speaker.title}', '${speaker.company}', '${speaker.image}')">
+            <div class="speaker-card">
                 <img src="${speaker.image}" alt="${speaker.name}" class="speaker-img" onerror="this.src='./Zee All Images:Videos/recap s1.png'">
                 <div class="speaker-name">${speaker.name}</div>
                 <div class="speaker-title">${speaker.title}</div>
@@ -1459,69 +1459,7 @@ function toggleSchedule() {
     }
 }
 
-// Open speaker modal
-function openSpeakerModal(name, title, company, img) {
-    const modal = document.getElementById('speaker-modal');
-    const modalImg = document.getElementById('modal-speaker-img');
-    const modalName = document.getElementById('modal-speaker-name');
-    const modalTitle = document.getElementById('modal-speaker-title');
-    const modalCompany = document.getElementById('modal-speaker-company');
-    
-    modalImg.src = img;
-    modalName.textContent = name;
-    modalTitle.textContent = title;
-    modalCompany.textContent = company;
-    
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-// Close speaker modal
-function closeSpeakerModal() {
-    const modal = document.getElementById('speaker-modal');
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-// Open speaker details modal
-function openSpeakerDetails() {
-    const firstModal = document.getElementById('speaker-modal');
-    const secondModal = document.getElementById('speaker-details-modal');
-    
-    // Copy data from first modal to second
-    const modalImg = document.getElementById('modal-speaker-img').src;
-    const modalName = document.getElementById('modal-speaker-name').textContent;
-    const modalTitle = document.getElementById('modal-speaker-title').textContent;
-    const modalCompany = document.getElementById('modal-speaker-company').textContent;
-    
-    document.getElementById('details-speaker-img').src = modalImg;
-    document.getElementById('details-speaker-name').textContent = modalName;
-    document.getElementById('details-speaker-title').textContent = modalTitle;
-    document.getElementById('details-speaker-company').textContent = modalCompany;
-    
-    firstModal.classList.remove('active');
-    secondModal.classList.add('active');
-}
-
-// Close speaker details modal
-function closeSpeakerDetails() {
-    const modal = document.getElementById('speaker-details-modal');
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-// Close modals on outside click
-window.addEventListener('click', (e) => {
-    const speakerModal = document.getElementById('speaker-modal');
-    const detailsModal = document.getElementById('speaker-details-modal');
-    
-    if (e.target === speakerModal) {
-        closeSpeakerModal();
-    }
-    if (e.target === detailsModal) {
-        closeSpeakerDetails();
-    }
-});
+// Speaker modal functionality removed
 
 // Initialize AGENDA when DOM is ready
 window.addEventListener('DOMContentLoaded', () => {

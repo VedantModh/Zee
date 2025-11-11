@@ -386,8 +386,7 @@
                     <div class="speakers-slider swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="speaker-card"
-                                    onclick="openSpeakerModal('Mr.Ashish Sehgal', 'Chief Growth Officer', 'Zee Entertainment Enterprises Ltd.', './Zee All Images:Videos/speaker1.jpg')">
+                                <div class="speaker-card">
                                     <img src="./Zee All Images:Videos/Speakers 1.png" alt="Mr.Ashish Sehgal"
                                         class="speaker-img" onerror="this.src='./Zee All Images:Videos/recap s1.png'">
                                     <div class="speaker-name">Mr.Ashish Sehgal</div>
@@ -436,8 +435,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="speaker-card"
-                                    onclick="openSpeakerModal('Mr.Ashish Sehgal', 'Chief Growth Officer', 'Zee Entertainment Enterprises Ltd.', './Zee All Images:Videos/speaker1.jpg')">
+                                <div class="speaker-card">
                                     <img src="./Zee All Images:Videos/Speakers 6.png" alt="Mr.Ashish Sehgal"
                                         class="speaker-img" onerror="this.src='./Zee All Images:Videos/recap s1.png'">
                                     <div class="speaker-name">Mr.Ashish Sehgal</div>
@@ -890,35 +888,6 @@
     </main>
 
     <!-- Speaker Modal -->
-    <div class="speaker-modal" id="speaker-modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeSpeakerModal()">&times;</span>
-            <div class="modal-speaker-info" id="modal-speaker-info">
-                <img src="" alt="Speaker" id="modal-speaker-img">
-                <h3 id="modal-speaker-name"></h3>
-                <p id="modal-speaker-title"></p>
-                <p id="modal-speaker-company"></p>
-                <button class="btn-gradient modal-info-btn" onclick="openSpeakerDetails()">VIEW DETAILS</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Speaker Details Modal -->
-    <div class="speaker-details-modal" id="speaker-details-modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeSpeakerDetails()">&times;</span>
-            <div class="modal-speaker-details" id="modal-speaker-details">
-                <img src="" alt="Speaker" id="details-speaker-img">
-                <h3 id="details-speaker-name"></h3>
-                <p id="details-speaker-title"></p>
-                <p id="details-speaker-company"></p>
-                <div class="speaker-bio">
-                    <p>Experienced leader with extensive expertise in growth strategies and digital transformation.
-                        Passionate about driving innovation in the entertainment industry.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 

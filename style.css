@@ -1625,7 +1625,7 @@ body {
 
 /* Speakers Section */
 .speakers-section {
-
+    cursor: auto;
     margin-top: 0px;
     padding-top: 0px;
 }
