@@ -1468,3 +1468,120 @@ window.addEventListener('DOMContentLoaded', () => {
         initAgendaSection();
     }, 2000);
 });
+
+
+
+// Register Form Submission
+document.addEventListener("DOMContentLoaded", function () {
+
+    const registerForm = document.getElementById("register-form");
+    showFormMessage(
+              "success",
+              "Thank you for registering! We will contact you soon."
+            );
+    if (registerForm) {
+      registerForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+  
+        // Get form values
+        const formData = {
+          name: document.getElementById("fullname").value,
+          emailID: document.getElementById("email").value,
+          mobile: document.getElementById("mobile").value,
+          company: document.getElementById("company").value,
+          city: document.getElementById("city").value,
+          _subject: document.getElementById("city").value,
+          _captcha: document.getElementById("city").value,
+          _next: document.getElementById("city").value,
+          _template: document.getElementById("city").value,
+        };
+  
+        // Disable submit button and show loading state
+        const submitButton = registerForm.querySelector("#register-submit");
+        const originalButtonText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = "SUBMITTING...";
+  
+        try {
+          const response = await fetch(
+            "https://certatio-prod.zee5.com/certatio/zee-adworld-rise/entry",
+            {
+              method: "POST",
+              headers: {
+                accept: "*/*",
+                "content-type": "application/json",
+                referer: "https://zee5adworld.com/",
+              },
+              body: JSON.stringify(formData),
+            }
+          );
+  
+          const data = await response.json();
+  
+          if (response.ok) {
+            // Success handling
+            console.log("Success:", data);
+  
+            // Show success message
+            showFormMessage(
+              "success",
+              "Thank you for registering! We will contact you soon."
+            );
+  
+            // Reset form
+            registerForm.reset();
+          } else {
+            // API returned an error
+             const errorMessage = data.userDisplayMessage ||
+                               data.errorMessage ||
+                               data.message ||
+                               "Registration failed. Please try again.";
+  
+            showFormMessage("error", errorMessage)
+          }
+        } catch (error) {
+          // Network or other error
+          console.error("Error:", error);
+          showFormMessage(
+            "error",
+            "Network error. Please check your connection and try again."
+          );
+        } finally {
+          // Re-enable submit button
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      });
+    }
+  });
+  
+  // Helper function to show form messages
+  // Helper function to show form messages
+  function showFormMessage(type, message) {
+    // Remove any existing message
+    const existingMessage = document.querySelector(".form-message");
+    if (existingMessage) existingMessage.remove();
+  
+    // Create new message element
+    const messageDiv = document.createElement("div");
+    messageDiv.className = `form-message form-message-${type}`;
+    messageDiv.textContent = message;
+  
+    // Get the target element
+    const registerForm = document.getElementById("msg");
+    console.log("registerForm:", registerForm);
+  
+    if (!registerForm) {
+      console.error("❌ Element with id='msg' not found.");
+      return;
+    }
+  
+    // Clear any old messages (optional)
+    registerForm.innerHTML = "";
+  
+    // Append the new message
+    registerForm.appendChild(messageDiv);
+  
+    // Auto-remove message after 5 seconds
+    setTimeout(() => messageDiv.remove(), 5000);
+  }
