@@ -1327,12 +1327,35 @@ function initAgendaSection() {
                 prevEl: prevBtn
             },
             breakpoints: {
-                360: { slidesPerView: 1.5, spaceBetween: 10 },
-                480: { slidesPerView: 2, spaceBetween: 15 },
                 640: { slidesPerView: 3, spaceBetween: 20 },
                 768: { slidesPerView: 4, spaceBetween: 20 },
                 1024: { slidesPerView: 5, spaceBetween: 20 }
             }
+        });
+        
+        // Add click handlers to city tabs
+        const cityTabs = document.querySelectorAll('.city-tab');
+        cityTabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                const city = tab.getAttribute('data-city');
+                switchCity(city);
+                
+                // On mobile (below 480px), scroll the clicked city tab to the left (0%)
+                if (window.innerWidth <= 480 && cityTabsSwiper) {
+                    // Find the parent swiper-slide of the clicked tab
+                    const slideElement = tab.closest('.swiper-slide');
+                    if (slideElement) {
+                        // Get all slides and find the index of the clicked slide
+                        const allSlides = Array.from(cityTabsEl.querySelectorAll('.swiper-slide'));
+                        const slideIndex = allSlides.indexOf(slideElement);
+                        
+                        if (slideIndex !== -1) {
+                            // Scroll to the slide, positioning it at the left (0%)
+                            cityTabsSwiper.slideTo(slideIndex, 300);
+                        }
+                    }
+                }
+            });
         });
     }
     
@@ -1358,15 +1381,6 @@ function initAgendaSection() {
             }
         });
     }
-    
-    // Add click handlers to city tabs
-    const cityTabs = document.querySelectorAll('.city-tab');
-    cityTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const city = tab.getAttribute('data-city');
-            switchCity(city);
-        });
-    });
     
     // Initialize with default city (Pune) speakers and timeline
     if (cityData.pune) {
