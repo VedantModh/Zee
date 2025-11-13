@@ -168,26 +168,28 @@ window.addEventListener('DOMContentLoaded', () => {
             const h1 = active ? active.querySelector('.hero-bottom h1') : document.querySelector('.hero-bottom h1');
             const cta = active ? active.querySelector('.hero-bottom .btn-gradient, .hero-bottom .cta') : document.querySelector('.hero-bottom .btn-gradient, .hero-bottom .cta');
 
-            // Split heading into spans
+            // Split heading into word spans
             if (h1 && !h1.dataset.split) {
                 const text = h1.textContent;
-                h1.innerHTML = text.split('').map(ch => `<span class=\"char\">${ch === ' ' ? '&nbsp;' : ch}</span>`).join('');
+                // Split by spaces and filter out empty strings
+                const words = text.split(/\s+/).filter(word => word.length > 0);
+                h1.innerHTML = words.map(word => `<span class="word">${word}</span>`).join(' ');
                 h1.dataset.split = 'true';
             }
 
-            const chars = document.querySelectorAll('.hero-bottom .char');
+            const words = document.querySelectorAll('.hero-bottom .word');
 
             gsap.set(hero, { opacity: 0 });
             gsap.set(header, { opacity: 0, y: -20 });
             gsap.set(logo, { opacity: 0, scale: 0.98 });
-            gsap.set(chars, { opacity: 0 });
+            gsap.set(words, { opacity: 0 });
             if (cta) gsap.set(cta, { opacity: 0, y: 50 });
 
             const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
             tl.to(hero, { opacity: 1, duration: 0.6 })
               .to(header, { opacity: 1, y: 0, duration: 0.5 }, '-=0.2')
               .to(logo, { opacity: 1, scale: 1, duration: 0.5 }, '-=0.1')
-              .to(chars, { opacity: 1, duration: 0.02, stagger: 0.02 }, '-=0.1')
+              .to(words, { opacity: 1, duration: 0.3, stagger: 0.1 }, '-=0.1')
               .to(cta, { opacity: 1, y: 0, duration: 0.45 }, '-=0.1');
         }
 
