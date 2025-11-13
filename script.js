@@ -658,6 +658,32 @@ function initScrollAnimations() {
 let mumbaiSwiper = null;
 let delhiSwiper = null;
 
+// Function to refresh scroll after content changes
+function refreshScroll() {
+    // Force a reflow to ensure height is recalculated
+    void document.body.offsetHeight;
+    
+    // Refresh ScrollTrigger if available
+    if (window.ScrollTrigger) {
+        ScrollTrigger.refresh();
+    }
+    
+    // Refresh Lenis if available
+    if (lenis) {
+        lenis.resize();
+    }
+    
+    // Additional refresh after a short delay to ensure all content is rendered
+    setTimeout(() => {
+        if (window.ScrollTrigger) {
+            ScrollTrigger.refresh();
+        }
+        if (lenis) {
+            lenis.resize();
+        }
+    }, 300);
+}
+
 function initRecapSwiper(swiperEl, swiperInstance) {
     if (!swiperInstance && window.Swiper && swiperEl) {
         return new Swiper(swiperEl, {
@@ -711,6 +737,8 @@ function showMumbaiHighlights() {
             // Initialize Swiper
             setTimeout(() => {
                 mumbaiSwiper = initRecapSwiper(mumbaiSwiperEl, mumbaiSwiper);
+                // Refresh scroll after swiper is initialized
+                refreshScroll();
             }, 100);
         } else {
             // Hide slider
@@ -718,6 +746,8 @@ function showMumbaiHighlights() {
             mumbaiBtn.classList.remove('btn-dark');
             mumbaiBtn.classList.add('btn-gradient');
             mumbaiBtn.setAttribute('onclick', 'showMumbaiHighlights()');
+            // Refresh scroll after hiding
+            refreshScroll();
         }
     }
 }
@@ -745,6 +775,8 @@ function showDelhiHighlights() {
             // Initialize Swiper
             setTimeout(() => {
                 delhiSwiper = initRecapSwiper(delhiSwiperEl, delhiSwiper);
+                // Refresh scroll after swiper is initialized
+                refreshScroll();
             }, 100);
         } else {
             // Hide slider
@@ -752,6 +784,8 @@ function showDelhiHighlights() {
             delhiBtn.classList.remove('btn-dark');
             delhiBtn.classList.add('btn-gradient');
             delhiBtn.setAttribute('onclick', 'showDelhiHighlights()');
+            // Refresh scroll after hiding
+            refreshScroll();
         }
     }
 }
