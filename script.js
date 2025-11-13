@@ -1283,8 +1283,8 @@ function initAgendaSection() {
         const nextBtn = document.querySelector('.city-nav-next');
         
         cityTabsSwiper = new Swiper(cityTabsEl, {
-            slidesPerView: 2,
-            spaceBetween: 15,
+            slidesPerView: 1.5,
+            spaceBetween: 10,
             centeredSlides: false,
             freeMode: false,
             navigation: {
@@ -1292,6 +1292,7 @@ function initAgendaSection() {
                 prevEl: prevBtn
             },
             breakpoints: {
+                360: { slidesPerView: 1.5, spaceBetween: 10 },
                 480: { slidesPerView: 2, spaceBetween: 15 },
                 640: { slidesPerView: 3, spaceBetween: 20 },
                 768: { slidesPerView: 4, spaceBetween: 20 },

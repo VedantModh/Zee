@@ -167,7 +167,7 @@ body {
     background-size: cover;
     background-position: 50% 50%;
     z-index: -2;
-    animation: slide-bg 10s linear infinite;
+    animation: slide-bg 15s linear infinite;
 }
 
 /* .slide-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; } */
@@ -203,7 +203,7 @@ body {
 .hero-bottom {
     position: absolute;
     left: 50%;
-    bottom: 15%;
+    bottom: 10%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -319,6 +319,7 @@ body {
 
 .nav-list a {
     color: #eaeaea;
+    font-weight: 500;
     text-decoration: none;
     font-size: 16px;
     letter-spacing: .4px;
@@ -1366,6 +1367,9 @@ body {
 .city-tabs-swiper {
     margin: 60px 0 20px;
     padding: 0 40px;
+    display: block;
+    visibility: visible;
+    overflow: visible;
 }
 
 /* City Tabs Navigation Arrows */
@@ -2467,7 +2471,6 @@ body {
 
     /* Hero Section */
     .hero-bottom {
-        bottom: 100px;
     }
 
     .hero-bottom h1 {
@@ -2547,7 +2550,7 @@ body {
 
     /* Hero */
     .hero-bottom {
-        bottom: 80px;
+        bottom: 10%;
         width: 85vw;
     }
 
@@ -2662,7 +2665,7 @@ body {
     }
 
     .hero-bottom {
-        bottom: 60px;
+        bottom: 10%;
         width: 90vw;
         padding: 0 20px;
         gap: 24px;
@@ -3054,7 +3057,7 @@ body {
     }
 
     .hero-bottom {
-        bottom: 50px;
+        bottom: 10%;
         width: 95vw;
         gap: 20px;
     }
@@ -3138,14 +3141,26 @@ body {
         font-size: clamp(24px, 6vw, 32px);
     }
 
+    .city-tabs-swiper {
+        padding: 0 20px !important;
+        margin: 40px 0 20px !important;
+        overflow: visible;
+    }
+
     .city-tabs-swiper .swiper-slide {
-        width: calc(60% - 7.5px) !important;
+        width: calc(70% - 7.5px) !important;
         flex-shrink: 0;
+    }
+
+    .city-tabs-swiper .swiper-wrapper {
+        display: flex;
+        align-items: center;
     }
 
     .city-tab {
         padding: 10px 16px;
         width: 100%;
+        min-width: 120px;
     }
 
     .city-tab .city-name {
@@ -3159,6 +3174,7 @@ body {
     .city-tabs-nav {
         justify-content: center;
         gap: 30px;
+        padding: 0 20px !important;
     }
 
     .speakers-slider .swiper-button-next {
