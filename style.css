@@ -2978,6 +2978,16 @@ body {
 @media (max-width: 480px) {
 
     /* Header */
+
+    .slide-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: 50% 50%;
+        z-index: -2;
+        animation: slide-bg 30s linear infinite;
+    }
+
     .site-header {
         padding: 16px 16px;
         display: flex;
