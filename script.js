@@ -1120,97 +1120,97 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    if (registerForm) {
-        registerForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            console.log('Form submit event triggered');
+    // if (registerForm) {
+    //     registerForm.addEventListener('submit', async (e) => {
+    //         e.preventDefault();
+    //         console.log('Form submit event triggered');
             
-            // Validate form
-            if (!registerForm.checkValidity()) {
-                console.log('Form validation failed');
-                registerForm.reportValidity();
-                return;
-            }
+    //         // Validate form
+    //         if (!registerForm.checkValidity()) {
+    //             console.log('Form validation failed');
+    //             registerForm.reportValidity();
+    //             return;
+    //         }
             
-            console.log('Form is valid, proceeding with submission');
+    //         console.log('Form is valid, proceeding with submission');
             
-            const submitBtn = registerForm.querySelector('.register-submit');
-            if (!submitBtn) {
-                console.error('Submit button not found');
-                return;
-            }
+    //         const submitBtn = registerForm.querySelector('.register-submit');
+    //         if (!submitBtn) {
+    //             console.error('Submit button not found');
+    //             return;
+    //         }
             
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'SUBMITTING...';
-            submitBtn.disabled = true;
+    //         const originalText = submitBtn.textContent;
+    //         submitBtn.textContent = 'SUBMITTING...';
+    //         submitBtn.disabled = true;
             
-            // Get form data
-            const formData = new FormData(registerForm);
+    //         // Get form data
+    //         const formData = new FormData(registerForm);
             
-            // Add email explicitly to form data
-            formData.append('_to', 'vedantmodh8055@gmail.com');
+    //         // Add email explicitly to form data
+    //         formData.append('_to', 'vedantmodh8055@gmail.com');
             
-            try {
-                // Submit to FormSubmit service
-                console.log('Sending form data to FormSubmit...');
-                const response = await fetch('https://formsubmit.co/ajax/vedantmodh8055@gmail.com', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
+    //         try {
+    //             // Submit to FormSubmit service
+    //             console.log('Sending form data to FormSubmit...');
+    //             const response = await fetch('https://formsubmit.co/ajax/vedantmodh8055@gmail.com', {
+    //                 method: 'POST',
+    //                 body: formData,
+    //                 headers: {
+    //                     'Accept': 'application/json'
+    //                 }
+    //             });
                 
-                console.log('Response status:', response.status);
-                console.log('Response headers:', response.headers);
+    //             console.log('Response status:', response.status);
+    //             console.log('Response headers:', response.headers);
                 
-                // Get response text first to see what we're getting
-                const responseText = await response.text();
-                console.log('Response text:', responseText);
+    //             // Get response text first to see what we're getting
+    //             const responseText = await response.text();
+    //             console.log('Response text:', responseText);
                 
-                let data;
-                try {
-                    data = JSON.parse(responseText);
-                } catch (parseError) {
-                    console.error('Failed to parse JSON:', parseError);
-                    // If response is not JSON, check if it's a success message
-                    if (response.status === 200 || response.status === 302 || responseText.toLowerCase().includes('success') || responseText.toLowerCase().includes('thank')) {
-                        data = { success: true };
-                    } else {
-                        // Try to extract error message
-                        throw new Error('Invalid response format: ' + responseText.substring(0, 100));
-                    }
-                }
+    //             let data;
+    //             try {
+    //                 data = JSON.parse(responseText);
+    //             } catch (parseError) {
+    //                 console.error('Failed to parse JSON:', parseError);
+    //                 // If response is not JSON, check if it's a success message
+    //                 if (response.status === 200 || response.status === 302 || responseText.toLowerCase().includes('success') || responseText.toLowerCase().includes('thank')) {
+    //                     data = { success: true };
+    //                 } else {
+    //                     // Try to extract error message
+    //                     throw new Error('Invalid response format: ' + responseText.substring(0, 100));
+    //                 }
+    //             }
                 
-                console.log('Response data:', data);
+    //             console.log('Response data:', data);
                 
-                // Check for success (FormSubmit.co returns success in different formats)
-                // Status 200 or 302 usually means success
-                if (data.success === true || response.status === 200 || response.status === 302 || data.message || (responseText && responseText.toLowerCase().includes('success'))) {
-                    alert('Thank you! Your registration has been submitted successfully. We will contact you soon.');
-                    registerForm.reset();
-                    // Reset label visibility after form reset
-                    const formFields = registerForm.querySelectorAll('.form-field input');
-                    formFields.forEach(input => {
-                        const formField = input.closest('.form-field');
-                        const label = formField.querySelector('label');
-                        if (label && input.value.trim() === '') {
-                            label.style.opacity = '1';
-                            label.style.visibility = 'visible';
-                        }
-                    });
-                } else {
-                    throw new Error('Submission failed: ' + (data.message || 'Unknown error'));
-                }
-            } catch (error) {
-                console.error('Form submission error:', error);
-                alert('There was an error submitting your registration. Please try again or contact us directly at vedantmodh8055@gmail.com\n\nError: ' + error.message);
-            } finally {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }
-        });
-    }
+    //             // Check for success (FormSubmit.co returns success in different formats)
+    //             // Status 200 or 302 usually means success
+    //             if (data.success === true || response.status === 200 || response.status === 302 || data.message || (responseText && responseText.toLowerCase().includes('success'))) {
+    //                 alert('Thank you! Your registration has been submitted successfully. We will contact you soon.');
+    //                 registerForm.reset();
+    //                 // Reset label visibility after form reset
+    //                 const formFields = registerForm.querySelectorAll('.form-field input');
+    //                 formFields.forEach(input => {
+    //                     const formField = input.closest('.form-field');
+    //                     const label = formField.querySelector('label');
+    //                     if (label && input.value.trim() === '') {
+    //                         label.style.opacity = '1';
+    //                         label.style.visibility = 'visible';
+    //                     }
+    //                 });
+    //             } else {
+    //                 throw new Error('Submission failed: ' + (data.message || 'Unknown error'));
+    //             }
+    //         } catch (error) {
+    //             console.error('Form submission error:', error);
+    //             alert('There was an error submitting your registration. Please try again or contact us directly at vedantmodh8055@gmail.com\n\nError: ' + error.message);
+    //         } finally {
+    //             submitBtn.textContent = originalText;
+    //             submitBtn.disabled = false;
+    //         }
+    //     });
+    // }
 });
 
 // AGENDA Section Functions
